@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:vpnwy_app/core/routes/routes.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -20,17 +23,17 @@ class OnBoardingScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 80, bottom: 30),
+            padding: EdgeInsets.only(top: 80.h, bottom: 30.h),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  padding: EdgeInsets.symmetric(horizontal: 20.0.w),
                   child: Text(
                     "Enjoy Unlimited\nServers In One Place",
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 32,
+                      fontSize: 32.sp,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
                     ),
@@ -38,21 +41,23 @@ class OnBoardingScreen extends StatelessWidget {
                 ),
                 const Spacer(),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  padding: EdgeInsets.symmetric(horizontal: 20.0.w),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push(AppRoutes.homeConnectedScreen);
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xff674FF7),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(22),
+                        borderRadius: BorderRadius.circular(22.r),
                       ),
-                      minimumSize: Size(double.infinity, 60),
+                      minimumSize: Size(double.infinity, 60.h),
                     ),
-                    child: const Text(
+                    child: Text(
                       "Explore Now",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 20.sp,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
